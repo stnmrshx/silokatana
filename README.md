@@ -7,9 +7,9 @@ Fast key-value Store Based and Storage Engine for Shinobi Dev
 HOW TO :
 ========
 
-make all - create all
+make all - Create all
 
-make silo-benchmark - create benchmark file binary
+make silo-benchmark - Create benchmark file binary
 
 make clean - Delete all object
 
