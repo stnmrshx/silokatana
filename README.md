@@ -31,6 +31,25 @@ make clean - Delete all object
 
 Yaaaah silahken diliat sajalah Makefilenya
 
+
+STEP BY STEP :
+==============
+
+1. Open your terminal first
+
+2. git clone https://github.com/stnmrshx/silokatana.git
+
+3. cd silokatana/
+
+4. make silo-benchmark 'OR' make all
+
+5. ./silo-benchmark write 100000000
+
+6. ./silo-benchmark read 100000000
+
+5. To remove obj files and storage just type 'make clean && make cleandb'
+
+
 BENCHMARKnya :
 ==============
 ./silo-benchmark write 1000000 - Nulis key sejuta a.k.a 1000K
