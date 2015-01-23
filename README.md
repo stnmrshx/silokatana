@@ -102,6 +102,6 @@ Ya masih dalam tahap prototype, ntar ditambah2 lagi kok
 
 TODO LIST
 ==========
-1. Create DBServer
-2. Create Binding Storage
-3. Poto-poto Unyu
+1. Create DBServer **done
+2. Create Binding Storage **taperlu pake bindingnya redis ajah :))
+3. Poto-poto Unyu **done cek folder "unyupokoknya" kemungkinan akan diapdet berkala :-"
