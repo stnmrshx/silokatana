@@ -46,7 +46,48 @@ STEP BY STEP :
 5. ./silo-benchmark write 1000000
 6. ./silo-benchmark read 1000000
 
-5. To remove obj files and storage just type 'make clean && make cleandb'
+7. To remove obj files and storage just type 'make clean && make cleandb'
+
+
+INSTALL AS SERVER :
+===================
+
+1. Open your terminal first
+
+2. git clone https://github.com/stnmrshx/silokatana.git
+
+3. cd silokatana/
+
+4. make siloserver
+
+5. Silahken pindahken siloserver ketempat yang lebih beradad bisa di /usr/bin bisa di /opt
+
+6. sudo siloserver
+
+7. Silo server sudah jalan, buat ngetes bisa pakai redis-cli
+
+8. sudo apt-get install redis-tools
+
+9. redis-cli
+   127.0.0.1:6379>
+   127.0.0.1:6379>PING
+   PONG
+   127.0.0.1:6379>SET konci "yaapalah ini gan"
+   OK
+   127.0.0.1:6379>GET konci
+   "apalah ini"
+   127.0.0.1:6379>
+
+10. Support Command :
+	PING
+	GET
+	SET
+	MGET
+	MSET
+	DEL
+	INFO
+	SHUTDOWN
+	
 
 
 BENCHMARKnya :

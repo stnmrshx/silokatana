@@ -17,15 +17,24 @@ LIB_OBJS = \
 	./storage/src/jikukan.o\
 	./storage/src/log.o
 
+SVR_OBJS = \
+	./server/src/ae.o\
+	./server/src/anet.o\
+	./server/src/request.o\
+	./server/src/response.o\
+	./server/src/zmalloc.o
+
 LIBRARY = libsilokatana.so
 
 all: $(LIBRARY)
 
 clean:
 	-rm -f $(LIBRARY)  
-	-rm -f $(LIB_OBJS)
-	-rm -f bench/silo-benchmark.o
+	-rm -f silo-benchmark siloserver
+	-rm -f bench/silo-benchmark.o server/src/siloserver.o 
 	-rm -f silo-benchmark
+	-rm -f $(SVR_OBJS)
+	-rm -f $(LIB_OBJS)
 
 cleandb:
 	-rm -rf silodbs
@@ -36,3 +45,6 @@ $(LIBRARY): $(LIB_OBJS)
 
 silo-benchmark: bench/silo-benchmark.o $(LIB_OBJS)
 	$(CC) -pthread  bench/silo-benchmark.o $(LIB_OBJS) -o $@
+
+siloserver: server/src/siloserver.o $(SVR_OBJS) $(LIB_OBJS)
+	$(CC) -pthread server/src/siloserver.o $(SVR_OBJS) $(LIB_OBJS) -o $@
